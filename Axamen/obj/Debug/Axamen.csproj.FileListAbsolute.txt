@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\Axamen\Axamen\bin\Debug\Axamen.exe.config
+C:\Users\user\source\repos\Axamen\Axamen\bin\Debug\Axamen.exe
+C:\Users\user\source\repos\Axamen\Axamen\bin\Debug\Axamen.pdb
+C:\Users\user\source\repos\Axamen\Axamen\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.Form1.resources
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.Lideres.resources
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.Menu.resources
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.Mlider.resources
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.Properties.Resources.resources
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.Vehiculocs.resources
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.csproj.CopyComplete
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.exe
+C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.pdb
