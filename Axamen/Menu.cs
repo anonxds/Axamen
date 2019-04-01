@@ -35,5 +35,12 @@ namespace Axamen
         {
             Close();
         }
+
+        private void btnrutas_Click(object sender, EventArgs e)
+        {
+            Rutas r = new Rutas();
+            r.Show();
+            this.Hide();
+        }
     }
 }
