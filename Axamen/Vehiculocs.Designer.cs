@@ -444,9 +444,9 @@
             this.label17.Location = new System.Drawing.Point(362, 255);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 13);
+            this.label17.Size = new System.Drawing.Size(53, 13);
             this.label17.TabIndex = 39;
-            this.label17.Text = "Editar";
+            this.label17.Text = "Actualizar";
             // 
             // label18
             // 

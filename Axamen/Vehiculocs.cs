@@ -21,7 +21,6 @@ namespace Axamen
         ADB db = new ADB();
         vehiculofabrica fabrica = null;
         facades facade = new facades(); 
-    //    string[] clan = new string[] { "Estrella Dorada", "Maltisa", "Verde & Cream","Pendiente" };
         string[] v = new string[] {"Privado","Taxi","Calafia","Camion"};
         string[] Com = new string[] {"Electrico","Gas","Diesel","Nitrogeno"};
         public void fill()
@@ -43,11 +42,8 @@ namespace Axamen
         public Vehiculocs()
         {
             InitializeComponent();
-            fill();
-            db.populate(cbvehiculo,"select * from vehiculo","vim");
-            db.populate(cbtiporuta, "select * from grimos", "nombre");
-            db.populate(cbIgremio, "select * from grimos", "nombre");
-            db.populate(cbR, "select * from rutas", "nombre");
+            fill();           
+            facade.LP(cbvehiculo, cbtiporuta, cbIgremio, cbR);
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
@@ -76,7 +72,7 @@ namespace Axamen
                 }
                 else
                 {
-                    //
+                    
                     switch (cbtipovehiculo.Text)
                     {
                         case "Taxi":
@@ -88,16 +84,13 @@ namespace Axamen
                         case "Calafia":
                             fabrica = new calafiafrabrica(int.Parse(txtKi.Text), int.Parse(txtcapacidad.Text), cbtipocfom.Text,txtbin.Text);
                             break;
-
                         case "Camion":
                             fabrica = new camionfabrica(int.Parse(txtKi.Text), int.Parse(txtcapacidad.Text), cbtipocfom.Text,txtbin.Text);
                             break;
                                 
-
                     }              
                        Vehiculo v = fabrica.GetVehiculo();     
-                    facade.insertar(v.VIN, cbtipovehiculo.Text, v.capacidad, cbtipocfom.Text, cbtiporuta.Text, cbruta.Text, v.kilometrage);                  
-                    db.populate(cbvehiculo, "select * from vehiculo", "vim");
+                    facade.insertar(v.VIN, cbtipovehiculo.Text, v.capacidad, cbtipocfom.Text, cbtiporuta.Text, cbruta.Text, v.kilometrage,cbvehiculo);                                
                     limpiar();                
                 }
             }
@@ -127,14 +120,12 @@ namespace Axamen
         private void btnmodificar_Click(object sender, EventArgs e)
         {         
             facade.update(cbIvehiculo.Text, int.Parse(txtIC.Text), cbC.Text, cbR.Text, cbIgremio.Text, int.Parse(txtIki.Text), cbvehiculo.Text,cbvehiculo);
-     //       db.populate(cbvehiculo, "select * from vehiculo", "vim");
             Clean();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {           
-            facade.delete(cbvehiculo.Text);
-            db.populate(cbvehiculo, "select * from vehiculo", "vim");
+            facade.delete(cbvehiculo.Text,cbvehiculo);           
             Clean();
         }
         public void Rutas()
@@ -186,30 +177,7 @@ namespace Axamen
             }
             con.Close();
         }
-        private void rutassE()
-        {
-            cbR.Items.Clear();
-         
-            cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from grimos where nombre = '" + cbIgremio.SelectedItem.ToString() + "'";
-           ;
-            cmd.ExecuteNonQuery();
-            //
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                cbR.Items.Add(dr["ruta1"].ToString());
-                cbR.Items.Add(dr["ruta2"].ToString());
-                cbR.Items.Add(dr["ruta3"].ToString());
-            }
-            con.Close();
-        }
-
-
+       
         //
        
 
@@ -262,12 +230,9 @@ namespace Axamen
                 cbR.Text = dr["ruta"].ToString();
                 txtIC.Text = dr["capacidad"].ToString();
                 txtIki.Text = dr["Kilometraje"].ToString();
-
-
             }
             con.Close();
         }
-
         private void cbruta_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -275,9 +240,15 @@ namespace Axamen
 
         private void cbIgremio_SelectedIndexChanged(object sender, EventArgs e)
         {
-    
-           
-           
+            if(cbIgremio.Text == "pendiente")
+            {
+                cbR.Text = null;
+                cbR.Enabled = false;
+            }
+            else
+            {                
+                cbR.Enabled = true ;
+            }                      
         }
 
         private void txtIki_KeyPress(object sender, KeyPressEventArgs e)

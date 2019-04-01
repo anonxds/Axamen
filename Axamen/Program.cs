@@ -16,7 +16,7 @@ namespace Axamen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vehiculocs());
+            Application.Run(new Form1());
         }
     }
 }
