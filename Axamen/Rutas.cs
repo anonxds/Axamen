@@ -17,7 +17,10 @@ namespace Axamen
         public Rutas()
         {
             InitializeComponent();
-            dbs.populate(cblistaclan, "select * from grimos", "nombre");
+            dbs.populate(cblistaclan, "select * from grimos where nombre not in ('pendiente')", "nombre");
+            dbs.populate(cbruta1, "select * from rutas", "nombre");
+            dbs.populate(cbruta2, "select * from rutas", "nombre");
+            dbs.populate(cbruta3, "select * from rutas", "nombre");
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
@@ -29,9 +32,16 @@ namespace Axamen
 
         private void cblistaclan_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
-            enable();
-            fil();
+            if (cblistaclan.Text == "pendiente")
+            {
+                cbruta1.Enabled = cbruta2.Enabled = cbruta3.Enabled = btnmodificar.Enabled = Eliminar.Enabled = false;
+                
+            }
+            else
+            {
+                enable();
+                fil();
+            }
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
@@ -54,10 +64,17 @@ namespace Axamen
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
-            string upd = string.Format("update grimos set ruta1 = '{0}',ruta2 = '{1}',ruta3 = '{2}' where nombre = '{3}'",cbruta1.Text,cbruta2.Text,cbruta3.Text,cblistaclan.Text);
-            dbs.Exe(upd);
-            dbs.populate(cblistaclan, "select * from grimos", "nombre");
-            limpiar();
+            if (cbruta1.Text == cbruta2.Text || cbruta1.Text == cbruta3.Text || cbruta2.Text == cbruta1.Text || cbruta2.Text == cbruta3.Text || cbruta3.Text == cbruta1.Text || cbruta3.Text == cbruta2.Text)
+            {
+                MessageBox.Show("No puede ver rutas identicas");
+            }
+            else
+            {
+                string upd = string.Format("update grimos set ruta1 = '{0}',ruta2 = '{1}',ruta3 = '{2}' where nombre = '{3}'", cbruta1.Text, cbruta2.Text, cbruta3.Text, cblistaclan.Text);
+                dbs.Exe(upd);
+                dbs.populate(cblistaclan, "select * from grimos", "nombre");
+                limpiar();
+            }
          
         }
         MySqlConnection con = new MySqlConnection("Server=traficdb.mysql.database.azure.com; Port=3306; Database=Parras; Uid=orlando@traficdb; Pwd=Bejeweled2012; SslMode=Preferred;");
@@ -82,10 +99,14 @@ namespace Axamen
                 cbruta1.Text = dr["ruta1"].ToString();
                 cbruta2.Text = dr["ruta2"].ToString();
                 cbruta3.Text = dr["ruta3"].ToString();
-               
-
+              
             }
             con.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

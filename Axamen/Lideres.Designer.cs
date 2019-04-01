@@ -68,6 +68,7 @@
             // 
             this.txtnombre.Location = new System.Drawing.Point(69, 27);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.MaxLength = 25;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(68, 20);
             this.txtnombre.TabIndex = 0;
@@ -76,6 +77,7 @@
             // 
             this.txtapellido.Location = new System.Drawing.Point(69, 48);
             this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtapellido.MaxLength = 25;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(68, 20);
             this.txtapellido.TabIndex = 1;
@@ -84,6 +86,7 @@
             // 
             this.txtedad.Location = new System.Drawing.Point(69, 69);
             this.txtedad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtedad.MaxLength = 2;
             this.txtedad.Name = "txtedad";
             this.txtedad.Size = new System.Drawing.Size(68, 20);
             this.txtedad.TabIndex = 2;
@@ -93,12 +96,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 122);
+            this.label3.Location = new System.Drawing.Point(14, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Gremios";
+            this.label3.Text = "Sindicato";
             // 
             // label4
             // 
@@ -154,12 +157,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(337, 94);
+            this.label7.Location = new System.Drawing.Point(327, 94);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Gremio";
+            this.label7.Text = "Sindicato";
             // 
             // lbl
             // 
@@ -186,6 +189,7 @@
             this.txtIapellido.Enabled = false;
             this.txtIapellido.Location = new System.Drawing.Point(382, 71);
             this.txtIapellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIapellido.MaxLength = 25;
             this.txtIapellido.Name = "txtIapellido";
             this.txtIapellido.Size = new System.Drawing.Size(68, 20);
             this.txtIapellido.TabIndex = 22;
@@ -196,6 +200,7 @@
             this.txtIEdad.Enabled = false;
             this.txtIEdad.Location = new System.Drawing.Point(382, 50);
             this.txtIEdad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIEdad.MaxLength = 2;
             this.txtIEdad.Name = "txtIEdad";
             this.txtIEdad.Size = new System.Drawing.Size(68, 20);
             this.txtIEdad.TabIndex = 23;
@@ -246,6 +251,7 @@
             // txtcontrasena
             // 
             this.txtcontrasena.Location = new System.Drawing.Point(69, 94);
+            this.txtcontrasena.MaxLength = 10;
             this.txtcontrasena.Name = "txtcontrasena";
             this.txtcontrasena.Size = new System.Drawing.Size(68, 20);
             this.txtcontrasena.TabIndex = 29;
@@ -272,6 +278,7 @@
             // 
             this.txtIcontrasena.Enabled = false;
             this.txtIcontrasena.Location = new System.Drawing.Point(384, 119);
+            this.txtIcontrasena.MaxLength = 10;
             this.txtIcontrasena.Name = "txtIcontrasena";
             this.txtIcontrasena.Size = new System.Drawing.Size(100, 20);
             this.txtIcontrasena.TabIndex = 32;
@@ -282,7 +289,7 @@
             this.btnmod.Enabled = false;
             this.btnmod.Image = global::Axamen.Properties.Resources.delete__1_;
             this.btnmod.ImageActive = null;
-            this.btnmod.Location = new System.Drawing.Point(437, 179);
+            this.btnmod.Location = new System.Drawing.Point(437, 144);
             this.btnmod.Margin = new System.Windows.Forms.Padding(2);
             this.btnmod.Name = "btnmod";
             this.btnmod.Size = new System.Drawing.Size(47, 46);
@@ -298,7 +305,7 @@
             this.btndelete.Enabled = false;
             this.btndelete.Image = global::Axamen.Properties.Resources.edit;
             this.btndelete.ImageActive = null;
-            this.btndelete.Location = new System.Drawing.Point(371, 179);
+            this.btndelete.Location = new System.Drawing.Point(371, 144);
             this.btndelete.Margin = new System.Windows.Forms.Padding(2);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(47, 46);
@@ -313,7 +320,7 @@
             this.btnsALIR.BackColor = System.Drawing.Color.Transparent;
             this.btnsALIR.Image = global::Axamen.Properties.Resources.back_arrow__2_;
             this.btnsALIR.ImageActive = null;
-            this.btnsALIR.Location = new System.Drawing.Point(241, 179);
+            this.btnsALIR.Location = new System.Drawing.Point(227, 161);
             this.btnsALIR.Margin = new System.Windows.Forms.Padding(2);
             this.btnsALIR.Name = "btnsALIR";
             this.btnsALIR.Size = new System.Drawing.Size(47, 46);
@@ -328,7 +335,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.Transparent;
             this.btnagregar.Image = global::Axamen.Properties.Resources.plus__1_;
             this.btnagregar.ImageActive = null;
-            this.btnagregar.Location = new System.Drawing.Point(69, 179);
+            this.btnagregar.Location = new System.Drawing.Point(69, 144);
             this.btnagregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(47, 46);
@@ -341,7 +348,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(72, 164);
+            this.label11.Location = new System.Drawing.Point(72, 194);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 13);
@@ -351,7 +358,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(243, 164);
+            this.label12.Location = new System.Drawing.Point(224, 209);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
@@ -361,7 +368,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(379, 164);
+            this.label13.Location = new System.Drawing.Point(379, 194);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 13);
@@ -371,7 +378,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(439, 164);
+            this.label14.Location = new System.Drawing.Point(441, 194);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 13);
@@ -382,7 +389,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 251);
+            this.ClientSize = new System.Drawing.Size(503, 235);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);

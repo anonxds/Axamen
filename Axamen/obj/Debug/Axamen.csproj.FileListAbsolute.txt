@@ -14,24 +14,23 @@ C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.csproj.CoreCompileInpu
 C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.csproj.CopyComplete
 C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.exe
 C:\Users\user\source\repos\Axamen\Axamen\obj\Debug\Axamen.pdb
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Axamen.exe.config
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Axamen.exe
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Axamen.pdb
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.csprojAssemblyReference.cache
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\MySql.Data.dll
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Axamen.exe.config
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Google.Protobuf.dll
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Google.Protobuf.xml
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\MySql.Data.xml
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Form1.resources
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Lideres.resources
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Menu.resources
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Mlider.resources
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Properties.Resources.resources
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Rutas.resources
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Vehiculocs.resources
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.csproj.GenerateResource.cache
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.csproj.CoreCompileInputs.cache
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.csproj.CopyComplete
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.exe
 C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.pdb
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\BibliotecaDeClases.dll
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\MySql.Data.dll
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Google.Protobuf.dll
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Google.Protobuf.xml
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\MySql.Data.xml
-C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.Rutas.resources
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\obj\Debug\Axamen.csprojAssemblyReference.cache
+C:\Users\Reborn 3.0\Documents\GitHub\Axamen\Axamen\bin\Debug\Axamen.pdb

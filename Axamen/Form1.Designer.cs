@@ -34,12 +34,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btningresar = new Bunifu.Framework.UI.BunifuImageButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btningresar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
             this.SuspendLayout();
             // 
             // txtusario
             // 
-            this.txtusario.Location = new System.Drawing.Point(92, 29);
+            this.txtusario.Location = new System.Drawing.Point(114, 31);
             this.txtusario.Margin = new System.Windows.Forms.Padding(2);
             this.txtusario.Name = "txtusario";
             this.txtusario.Size = new System.Drawing.Size(68, 20);
@@ -47,7 +50,7 @@
             // 
             // txtcontrasena
             // 
-            this.txtcontrasena.Location = new System.Drawing.Point(92, 58);
+            this.txtcontrasena.Location = new System.Drawing.Point(114, 60);
             this.txtcontrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtcontrasena.Name = "txtcontrasena";
             this.txtcontrasena.PasswordChar = '*';
@@ -57,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 31);
+            this.label1.Location = new System.Drawing.Point(67, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
@@ -67,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 60);
+            this.label2.Location = new System.Drawing.Point(49, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
@@ -79,7 +82,7 @@
             this.btningresar.BackColor = System.Drawing.Color.Transparent;
             this.btningresar.Image = global::Axamen.Properties.Resources.login;
             this.btningresar.ImageActive = null;
-            this.btningresar.Location = new System.Drawing.Point(102, 82);
+            this.btningresar.Location = new System.Drawing.Point(124, 84);
             this.btningresar.Margin = new System.Windows.Forms.Padding(2);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(47, 46);
@@ -92,18 +95,45 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(164, 115);
+            this.label3.Location = new System.Drawing.Point(124, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Acceder";
             // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnsalir.Image = global::Axamen.Properties.Resources.sign_out;
+            this.btnsalir.ImageActive = null;
+            this.btnsalir.Location = new System.Drawing.Point(257, 97);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(47, 46);
+            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnsalir.TabIndex = 6;
+            this.btnsalir.TabStop = false;
+            this.btnsalir.Zoom = 10;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(267, 145);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Salir";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 149);
+            this.ClientSize = new System.Drawing.Size(316, 167);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,6 +147,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btningresar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +161,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuImageButton btnsalir;
+        private System.Windows.Forms.Label label4;
     }
 }
 

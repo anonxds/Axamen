@@ -1,4 +1,5 @@
-﻿using Axamen.vehiculo;
+﻿using Axamen.facade;
+using Axamen.vehiculo;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace Axamen
         private MySqlCommand cmd;
         ADB db = new ADB();
         vehiculofabrica fabrica = null;
-
+        facades facade = new facades(); 
     //    string[] clan = new string[] { "Estrella Dorada", "Maltisa", "Verde & Cream","Pendiente" };
         string[] v = new string[] {"Privado","Taxi","Calafia","Camion"};
         string[] Com = new string[] {"Electrico","Gas","Diesel","Nitrogeno"};
@@ -46,6 +47,7 @@ namespace Axamen
             db.populate(cbvehiculo,"select * from vehiculo","vim");
             db.populate(cbtiporuta, "select * from grimos", "nombre");
             db.populate(cbIgremio, "select * from grimos", "nombre");
+            db.populate(cbR, "select * from rutas", "nombre");
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
@@ -93,11 +95,8 @@ namespace Axamen
                                 
 
                     }              
-                       Vehiculo v = fabrica.GetVehiculo();
-                   string A = string.Format("INSERT INTO vehiculo (`vim`, `tipo`, `capacidad`, `combustible`, `grimo`, `ruta`,`Kilometraje`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}')",
-                   v.VIN, cbtipovehiculo.Text, v.capacidad, cbtipocfom.Text, cbtiporuta.Text, cbruta.Text,v.kilometrage);
-                    db.Exe(A);
-                    MessageBox.Show("Se ingreso exitosamente");
+                       Vehiculo v = fabrica.GetVehiculo();     
+                    facade.insertar(v.VIN, cbtipovehiculo.Text, v.capacidad, cbtipocfom.Text, cbtiporuta.Text, cbruta.Text, v.kilometrage);                  
                     db.populate(cbvehiculo, "select * from vehiculo", "vim");
                     limpiar();                
                 }
@@ -126,22 +125,21 @@ namespace Axamen
         }
 
         private void btnmodificar_Click(object sender, EventArgs e)
-        {
-            string up = string.Format("update vehiculo set tipo ='{0}',capacidad = '{1}',combustible='{2}',ruta='{3}',grimo='{4}',Kilometraje='{5}' where vim ='{6}'", cbIvehiculo.Text,txtIC.Text,cbC.Text,cbR.Text,cbIgremio.Text,txtIki.Text,cbvehiculo.Text);
-            db.Exe(up);
-            db.populate(cbvehiculo, "select * from vehiculo", "vim");
+        {         
+            facade.update(cbIvehiculo.Text, int.Parse(txtIC.Text), cbC.Text, cbR.Text, cbIgremio.Text, int.Parse(txtIki.Text), cbvehiculo.Text,cbvehiculo);
+     //       db.populate(cbvehiculo, "select * from vehiculo", "vim");
             Clean();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
-        {
-            string del = string.Format("delete from vehiculo where vim = '{0}'",cbvehiculo.Text);
-            db.Exe(del);
+        {           
+            facade.delete(cbvehiculo.Text);
             db.populate(cbvehiculo, "select * from vehiculo", "vim");
             Clean();
         }
         public void Rutas()
         {
+            //combo
             switch (cbtiporuta.Text)
             {
                 case "Estrella Dorada":
@@ -191,11 +189,11 @@ namespace Axamen
         private void rutassE()
         {
             cbR.Items.Clear();
-            //con.Open();
+         
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from grimos where nombre = '" + cbIgremio.SelectedItem.ToString() + "'";
-           
+           ;
             cmd.ExecuteNonQuery();
             //
             DataTable dt = new DataTable();
@@ -213,30 +211,7 @@ namespace Axamen
 
 
         //
-        public void Rutas2()
-        {
-            switch (cbIgremio.Text)
-            {
-                case "Estrella Dorada":
-                    rutassE();
-                    cbR.Enabled = true;
-                    break;
-                case "Maltisa":
-                    {
-                        rutassE();
-                        cbR.Enabled = true;
-                        break;
-                    }
-                case "Verde & Cream":
-                    rutassE();
-                    cbR.Enabled = true;
-                    break;
-                case "pendiente":
-                    cbR.Items.Clear();
-                    cbR.Enabled = false;
-                    break;
-            }
-        }
+       
 
         private void cbtiporuta_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -269,7 +244,7 @@ namespace Axamen
    
         public void fil()
         {
-            con.Open();
+          con.Open();
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from vehiculo where vim = '" + cbvehiculo.SelectedItem.ToString() + "'";
@@ -300,7 +275,9 @@ namespace Axamen
 
         private void cbIgremio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Rutas2();
+    
+           
+           
         }
 
         private void txtIki_KeyPress(object sender, KeyPressEventArgs e)

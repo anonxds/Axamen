@@ -13,21 +13,15 @@ namespace Axamen
 {
     public partial class Lideres : Form
     {
-        string[] clan = new string[3] {"Azul","Maltisa","Verde & Cream"};
-        public void fill()
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                cbgrimo.Items.Add(clan[i]);
-                cbIgrimo.Items.Add(clan[i]);
-            }
-        }
+        
         public Lideres()
         {
             InitializeComponent();
-            fill();
+            
             cbnombre.Items.Add("h");
             d.populate(cbnombre, "select * from lideres", "nombre");
+            d.populate(cbgrimo, "select * from grimos where nombre not in ('pendiente')", "nombre");
+            d.populate(cbIgrimo, "select * from grimos where nombre not in ('pendiente')", "nombre");
         }
 
 

@@ -45,7 +45,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 70);
+            this.label1.Location = new System.Drawing.Point(66, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
@@ -55,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 70);
+            this.label2.Location = new System.Drawing.Point(153, 84);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
@@ -67,10 +67,10 @@
             this.btnsalir.BackColor = System.Drawing.Color.Transparent;
             this.btnsalir.Image = global::Axamen.Properties.Resources.sign_out;
             this.btnsalir.ImageActive = null;
-            this.btnsalir.Location = new System.Drawing.Point(317, 113);
+            this.btnsalir.Location = new System.Drawing.Point(334, 109);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(53, 52);
+            this.btnsalir.Size = new System.Drawing.Size(36, 40);
             this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnsalir.TabIndex = 2;
             this.btnsalir.TabStop = false;
@@ -82,7 +82,7 @@
             this.btnvehiculo.BackColor = System.Drawing.Color.Transparent;
             this.btnvehiculo.Image = global::Axamen.Properties.Resources.tyre;
             this.btnvehiculo.ImageActive = null;
-            this.btnvehiculo.Location = new System.Drawing.Point(173, 11);
+            this.btnvehiculo.Location = new System.Drawing.Point(172, 25);
             this.btnvehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.btnvehiculo.Name = "btnvehiculo";
             this.btnvehiculo.Size = new System.Drawing.Size(50, 56);
@@ -97,7 +97,7 @@
             this.btnlideres.BackColor = System.Drawing.Color.Transparent;
             this.btnlideres.Image = global::Axamen.Properties.Resources.friends;
             this.btnlideres.ImageActive = null;
-            this.btnlideres.Location = new System.Drawing.Point(70, 11);
+            this.btnlideres.Location = new System.Drawing.Point(69, 25);
             this.btnlideres.Margin = new System.Windows.Forms.Padding(2);
             this.btnlideres.Name = "btnlideres";
             this.btnlideres.Size = new System.Drawing.Size(56, 56);
@@ -110,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(286, 152);
+            this.label3.Location = new System.Drawing.Point(343, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
@@ -122,7 +122,7 @@
             this.btnrutas.BackColor = System.Drawing.Color.Transparent;
             this.btnrutas.Image = global::Axamen.Properties.Resources.road_perspective;
             this.btnrutas.ImageActive = null;
-            this.btnrutas.Location = new System.Drawing.Point(263, 11);
+            this.btnrutas.Location = new System.Drawing.Point(262, 25);
             this.btnrutas.Margin = new System.Windows.Forms.Padding(2);
             this.btnrutas.Name = "btnrutas";
             this.btnrutas.Size = new System.Drawing.Size(50, 56);
@@ -135,7 +135,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 70);
+            this.label4.Location = new System.Drawing.Point(269, 84);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 176);
+            this.ClientSize = new System.Drawing.Size(381, 159);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnrutas);
             this.Controls.Add(this.label3);

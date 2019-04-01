@@ -76,7 +76,10 @@ namespace Axamen
         {
 
         }
-       
-      
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

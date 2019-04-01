@@ -59,9 +59,10 @@
             // 
             // cbruta1
             // 
+            this.cbruta1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbruta1.Enabled = false;
             this.cbruta1.FormattingEnabled = true;
-            this.cbruta1.Location = new System.Drawing.Point(266, 16);
+            this.cbruta1.Location = new System.Drawing.Point(259, 16);
             this.cbruta1.Name = "cbruta1";
             this.cbruta1.Size = new System.Drawing.Size(121, 21);
             this.cbruta1.TabIndex = 1;
@@ -72,7 +73,7 @@
             this.btnmodificar.Enabled = false;
             this.btnmodificar.Image = global::Axamen.Properties.Resources.edit;
             this.btnmodificar.ImageActive = null;
-            this.btnmodificar.Location = new System.Drawing.Point(22, 92);
+            this.btnmodificar.Location = new System.Drawing.Point(57, 46);
             this.btnmodificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(47, 46);
@@ -88,7 +89,7 @@
             this.Eliminar.Enabled = false;
             this.Eliminar.Image = global::Axamen.Properties.Resources.delete__1_;
             this.Eliminar.ImageActive = null;
-            this.Eliminar.Location = new System.Drawing.Point(116, 92);
+            this.Eliminar.Location = new System.Drawing.Point(151, 46);
             this.Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(47, 46);
@@ -103,7 +104,7 @@
             this.btnsalir.BackColor = System.Drawing.Color.Transparent;
             this.btnsalir.Image = global::Axamen.Properties.Resources.sign_out;
             this.btnsalir.ImageActive = null;
-            this.btnsalir.Location = new System.Drawing.Point(547, 106);
+            this.btnsalir.Location = new System.Drawing.Point(423, 95);
             this.btnsalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(47, 46);
@@ -125,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 19);
+            this.label2.Location = new System.Drawing.Point(218, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 13;
@@ -133,18 +134,20 @@
             // 
             // cbruta3
             // 
+            this.cbruta3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbruta3.Enabled = false;
             this.cbruta3.FormattingEnabled = true;
-            this.cbruta3.Location = new System.Drawing.Point(266, 70);
+            this.cbruta3.Location = new System.Drawing.Point(259, 70);
             this.cbruta3.Name = "cbruta3";
             this.cbruta3.Size = new System.Drawing.Size(121, 21);
             this.cbruta3.TabIndex = 14;
             // 
             // cbruta2
             // 
+            this.cbruta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbruta2.Enabled = false;
             this.cbruta2.FormattingEnabled = true;
-            this.cbruta2.Location = new System.Drawing.Point(266, 43);
+            this.cbruta2.Location = new System.Drawing.Point(259, 43);
             this.cbruta2.Name = "cbruta2";
             this.cbruta2.Size = new System.Drawing.Size(121, 21);
             this.cbruta2.TabIndex = 15;
@@ -152,25 +155,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(113, 141);
+            this.label3.Location = new System.Drawing.Point(134, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Eliminar";
+            this.label3.Text = "Eliminar Sindicato";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 141);
+            this.label4.Location = new System.Drawing.Point(34, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Editar";
+            this.label4.Text = "Actualizar Rutas";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(492, 139);
+            this.label5.Location = new System.Drawing.Point(368, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 18;
@@ -179,7 +183,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(225, 46);
+            this.label6.Location = new System.Drawing.Point(218, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 19;
@@ -188,7 +192,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(225, 73);
+            this.label7.Location = new System.Drawing.Point(218, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 20;
@@ -198,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 163);
+            this.ClientSize = new System.Drawing.Size(481, 151);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

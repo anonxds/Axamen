@@ -21,12 +21,14 @@ namespace Axamen
             InitializeComponent();
             lblnombre.Text = nombre;
             fil();
-            string f = string.Format("select * from vehiculo where grimo = '{0}'",lblclan.Text);
+            string f = string.Format("select vim as VIM,tipo,capacidad,combustible from vehiculo where grimo = '{0}'", lblclan.Text);
+           
             dbs.dgrid(dgv, f);
             fill();
             cbruta.Items.Add("pendiete");
             dbs.populate(cbIvim, f, "vim");
-
+            rutass();
+            rutas2();
         }
 
         string[] v = new string[] { "Privado", "Taxi", "Calafia", "Camion" };
@@ -234,6 +236,72 @@ namespace Axamen
             limpiar();
         }
 
+        private void cbruta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         //
+
+
+        public void rutass()
+        {
+            cbruta.Items.Clear();
+            con.Open();
+            cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from grimos where nombre = '" + lblclan.Text + "'";
+            cmd.ExecuteNonQuery();
+            //
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                cbruta.Items.Add(dr["ruta1"].ToString());
+                cbruta.Items.Add(dr["ruta2"].ToString());
+                cbruta.Items.Add(dr["ruta3"].ToString());
+
+
+            }
+            con.Close();
+        }
+        public void rutas2()
+        {
+            cbR.Items.Clear();
+            con.Open();
+            cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from grimos where nombre = '" + lblclan.Text + "'";
+            cmd.ExecuteNonQuery();
+            //
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                cbR.Items.Add(dr["ruta1"].ToString());
+                cbR.Items.Add(dr["ruta2"].ToString());
+                cbR.Items.Add(dr["ruta3"].ToString());
+
+
+            }
+            con.Close();
+        }
+
+        private void txtcapacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cbvehiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
